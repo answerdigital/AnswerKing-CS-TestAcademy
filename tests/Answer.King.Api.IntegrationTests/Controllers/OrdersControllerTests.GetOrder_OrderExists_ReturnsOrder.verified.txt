@@ -1,6 +1,0 @@
-﻿{
-  Id: 1,
-  CreatedOn: DateTimeOffset_1,
-  LastUpdated: DateTimeOffset_1,
-  OrderStatus: Created
-}

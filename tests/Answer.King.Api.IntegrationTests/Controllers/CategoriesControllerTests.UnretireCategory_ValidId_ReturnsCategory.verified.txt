@@ -1,8 +1,0 @@
-{
-  id: 8,
-  name: Test Category,
-  description: Food from the oceans,
-  createdOn: DateTimeOffset_1,
-  lastUpdated: DateTimeOffset_2,
-  retired: false
-}
