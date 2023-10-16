@@ -1,6 +1,5 @@
 using System.Reflection;
 using Answer.King.Domain.Inventory.Models;
-using Answer.King.Domain.Repositories.Models;
 using Answer.King.Infrastructure.Repositories.Mappings;
 using Answer.King.Infrastructure.UnitTests.TestObjects;
 using Answer.King.Test.Common.CustomTraits;

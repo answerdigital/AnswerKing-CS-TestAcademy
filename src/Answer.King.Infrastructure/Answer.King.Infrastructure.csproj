@@ -18,7 +18,10 @@
     <TreatWarningsAsErrors>True</TreatWarningsAsErrors>
     <WarningsNotAsErrors>CA1848</WarningsNotAsErrors>
   </PropertyGroup>
-
+  <PropertyGroup>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591;CS1573</NoWarn>
+  </PropertyGroup>
   <ItemGroup>
     <None Remove="SeedData\ProductData.cs~RF44073381.TMP" />
   </ItemGroup>
@@ -39,5 +42,5 @@
     <InternalsVisibleTo Include="Answer.King.Api.UnitTests" />
     <InternalsVisibleTo Include="$(AssemblyName).UnitTests" />
   </ItemGroup>
-  
+
 </Project>
