@@ -114,3 +114,8 @@ app.MapControllers();
 app.MapHealthChecks("/health");
 
 app.Run();
+
+#pragma warning disable SA1601
+public partial class Program
+{
+}
