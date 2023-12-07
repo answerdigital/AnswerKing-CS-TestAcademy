@@ -4,25 +4,22 @@ using System.IO;
 using System.Net.Http;
 using Microsoft.AspNetCore.Mvc.Testing;
 
-internal class BaseTestClass : IDisposable
+public class BaseTestClass : IDisposable
 {
-    private WebApplicationFactory<Program> factory;
-    private HttpClient client;
+    public HttpClient Client;
 
     [OneTimeSetUp]
     public void Setup()
     {
         File.Delete(Path.Combine(TestContext.CurrentContext.TestDirectory, "db/Answer.King.db"));
         File.Delete(Path.Combine(TestContext.CurrentContext.TestDirectory, "db/Answer.King-log.db"));
-        this.factory = new WebApplicationFactory<Program>();
-        this.client = this.factory.CreateClient();
+        this.Client = new WebApplicationFactory<Program>().CreateClient();
     }
 
     [OneTimeTearDown]
     public void TearDown()
     {
-        this.client.Dispose();
-        this.factory.Dispose();
+        this.Client.Dispose();
     }
 
     public void Dispose()
