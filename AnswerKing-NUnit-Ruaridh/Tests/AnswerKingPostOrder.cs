@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net.Http;
 using Answer.King.Api.RequestModels;
+using Answer.King.IntegrationTests.Utilities;
 using FluentAssertions;
 using Microsoft.AspNetCore.Mvc.Testing;
 using static RestAssured.Dsl;
@@ -10,26 +12,27 @@ using Order = Answer.King.Api.RequestModels.Order;
 namespace Answer.King.IntegrationTests.Tests;
 
 [TestFixture]
-#pragma warning disable CA1001
-public class AnswerKingPostOrder
-#pragma warning restore CA1001
-{
-    private WebApplicationFactory<Program> factory;
-    private HttpClient client;
 
-    [OneTimeSetUp]
-    public void Setup()
-    {
-        this.factory = new WebApplicationFactory<Program>();
-        this.client = this.factory.CreateClient();
-    }
+public class AnswerKingPostOrder : BaseTestClass
+//{
+//    private WebApplicationFactory<Program> factory;
+//    private HttpClient client;
 
-    [OneTimeTearDown]
-    public void TearDown()
-    {
-        this.client.Dispose();
-        this.factory.Dispose();
-    }
+//    [OneTimeSetUp]
+//    public void Setup()
+//    {
+//        File.Delete(Path.Combine(TestContext.CurrentContext.TestDirectory, "db/Answer.King.db"));
+//        File.Delete(Path.Combine(TestContext.CurrentContext.TestDirectory, "db/Answer.King-log.db"));
+//        this.factory = new WebApplicationFactory<Program>();
+//        this.client = this.factory.CreateClient();
+//    }
+
+//    [OneTimeTearDown]
+//    public void TearDown()
+//    {
+//        this.client.Dispose();
+//        this.factory.Dispose();
+//    }
 
     [Test]
 
@@ -376,6 +379,12 @@ public class AnswerKingPostOrder
             .And.ContainAll("error", "'quantity' must be greater than or equal to '0'.") // The error message
             .And.NotContain("createOrder"); // Method name should not be revealed
     }
+
+    // Revisit this if CI doesn't work
+    //public void Dispose()
+    //{
+    //    GC.SuppressFinalize(this);
+    //}
 
     // [Test]
     // public void SnapshotTest()
