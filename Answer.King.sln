@@ -31,17 +31,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Answer.King.Infrastructure.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Answer.King.IntegrationTests", "AnswerKing-NUnit-Ruaridh\Answer.King.IntegrationTests.csproj", "{CC55D942-04BD-4455-852A-A24FD9E0CF40}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{78DED095-1057-46EE-A3AA-E8167E552405}"
-	ProjectSection(SolutionItems) = preProject
-		..\vue3-realworld-example-app-TestAcademy\.github\dependabot.yml = ..\vue3-realworld-example-app-TestAcademy\.github\dependabot.yml
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{82963897-6338-45C7-B860-4F99BD6FFD8C}"
-	ProjectSection(SolutionItems) = preProject
-		pull-request.yml = pull-request.yml
-		workflow-dispatch.yaml = workflow-dispatch.yaml
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -161,7 +150,6 @@ Global
 		{4C8C0B44-7F02-4F69-A3BA-0AD7E9231BAD} = {F3A9A152-CBD9-4004-9745-1478B24AEB9B}
 		{C1175B84-7518-404B-9DA7-85D0BF051C6B} = {F3A9A152-CBD9-4004-9745-1478B24AEB9B}
 		{CC55D942-04BD-4455-852A-A24FD9E0CF40} = {F3A9A152-CBD9-4004-9745-1478B24AEB9B}
-		{82963897-6338-45C7-B860-4F99BD6FFD8C} = {78DED095-1057-46EE-A3AA-E8167E552405}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B0807BAF-430C-45E0-89FB-DB6ABAF9D5C4}
