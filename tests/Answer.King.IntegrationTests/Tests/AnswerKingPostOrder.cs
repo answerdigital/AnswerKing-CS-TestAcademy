@@ -25,7 +25,7 @@ public class AnswerKingPostOrder : BaseTestClass
 
 {
     [Test]
-    public void GetAllOrdersRestAssured()
+    public void GetAllOrders()
     {
         Given(this.Client)
             .When()
@@ -79,7 +79,7 @@ public class AnswerKingPostOrder : BaseTestClass
     }
 
     [Test]
-    public void BlankOrderNoBodyRestAssured()
+    public void FailedOrder_NoBody()
     {
         var response = (ProblemDetails)Given(this.Client)
         .When()
