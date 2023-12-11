@@ -7,6 +7,7 @@ using System.Text.Json;
 using System.Xml.Linq;
 using Answer.King.Api.RequestModels;
 using Answer.King.Domain.Orders;
+using Answer.King.IntegrationTests.POCO;
 using Answer.King.IntegrationTests.TestData;
 using Answer.King.IntegrationTests.Utilities;
 using FluentAssertions;
@@ -16,14 +17,14 @@ using Newtonsoft.Json;
 using Snapshooter.NUnit;
 using static RestAssured.Dsl;
 using Order = Answer.King.Api.RequestModels.Order;
+using LiteDB;
+using System.Linq;
 
 namespace Answer.King.IntegrationTests.Tests;
-
 [TestFixture]
-
 public class AnswerKingPostOrder : BaseTestClass
-
 {
+    [Parallelizable(scope: ParallelScope.Self)]
     [Test]
     public void GetAllOrders()
     {
@@ -54,6 +55,7 @@ public class AnswerKingPostOrder : BaseTestClass
                                                         .IgnoreField("Id")
                                                         .IgnoreField("CreatedOn")
                                                         .IgnoreField("LastUpdated"));
+
     }
 
     [TestCase("Fail_Retired_Product_Order")]
@@ -66,27 +68,33 @@ public class AnswerKingPostOrder : BaseTestClass
     {
         var orderRequest = DataHelper.GetOrderData(name);
 
-        var orderResponse = (ProblemDetails)Given(this.Client)
+        var orderResponse = (ErrorResponse)Given(this.Client)
         .Body(orderRequest)
         .When()
         .Post("https://localhost:44333/api/orders")
         .Then()
         .StatusCode(400)
-        .DeserializeTo(typeof(ProblemDetails));
+        .DeserializeTo(typeof(ErrorResponse));
 
         Snapshot.Match(orderResponse, matchOptions => matchOptions
                                                         .IgnoreField("TraceId"));
+
+        //var database = new LiteDatabase($@"db\{this.testDb}");
+        //var collection = database.GetCollection<Category>("categories");
+        //var results = collection.Find(Query.All());
+        //var items = results.ToList();
+        //Console.WriteLine(results);
     }
 
     [Test]
     public void FailedOrder_NoBody()
     {
-        var response = (ProblemDetails)Given(this.Client)
+        var response = (ErrorResponse)Given(this.Client)
         .When()
         .Post("https://localhost:44333/api/orders")
         .Then()
         .StatusCode(400)
-        .DeserializeTo(typeof(ProblemDetails));
+        .DeserializeTo(typeof(ErrorResponse));
 
         Snapshot.Match(response, matchOptions => matchOptions
                                                         .IgnoreField("TraceId"));

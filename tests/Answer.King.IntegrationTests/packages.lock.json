@@ -17,6 +17,12 @@
           "System.Configuration.ConfigurationManager": "4.4.0"
         }
       },
+      "LiteDB": {
+        "type": "Direct",
+        "requested": "[5.0.15, )",
+        "resolved": "5.0.15",
+        "contentHash": "nucyfCOGSATH553BxplxExP3BOqEwmHt0B57426EIaQjD3CC1Odb52VVCGgTxyYaD2oe3B/cJk8jDo6XiBJqPg=="
+      },
       "Microsoft.AspNetCore.Mvc.Testing": {
         "type": "Direct",
         "requested": "[7.0.14, )",
@@ -175,11 +181,6 @@
         "type": "Transitive",
         "resolved": "1.11.54",
         "contentHash": "bgB79N4urc4D7hrD4R+Qk6CjPiYOfs6vfXNsmw3nCcfQEQvBQGjfAcl5k/tB1ZP1hA0d7xXs0jK8xAXV36IVUg=="
-      },
-      "LiteDB": {
-        "type": "Transitive",
-        "resolved": "5.0.15",
-        "contentHash": "nucyfCOGSATH553BxplxExP3BOqEwmHt0B57426EIaQjD3CC1Odb52VVCGgTxyYaD2oe3B/cJk8jDo6XiBJqPg=="
       },
       "Microsoft.AspNetCore.Hosting.Abstractions": {
         "type": "Transitive",

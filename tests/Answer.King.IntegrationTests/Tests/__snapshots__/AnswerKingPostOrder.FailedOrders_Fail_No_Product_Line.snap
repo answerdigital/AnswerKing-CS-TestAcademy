@@ -1,8 +1,8 @@
 ﻿{
-  "Type": "https://tools.ietf.org/html/rfc7231#section-6.5.1",
-  "Title": "One or more validation errors occurred.",
-  "Status": 400,
-  "Detail": null,
-  "Instance": null,
-  "Extensions": {}
+  "Errors": {
+    "lineItems[0].productId": [
+      "'product Id' must not be empty."
+    ]
+  },
+  "Status": 400
 }
