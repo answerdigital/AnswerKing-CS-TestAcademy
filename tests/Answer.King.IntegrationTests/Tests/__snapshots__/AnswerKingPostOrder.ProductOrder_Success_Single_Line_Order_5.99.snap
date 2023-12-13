@@ -1,0 +1,19 @@
+﻿{
+  "id": 4,
+  "createdOn": "2023-12-13T14:41:19.663364Z",
+  "lastUpdated": "2023-12-13T14:41:19.6673243Z",
+  "orderStatus": "Created",
+  "orderTotal": 5.99,
+  "lineItems": [
+    {
+      "product": {
+        "id": 1,
+        "name": "Fish",
+        "description": "Delicious and satisfying.",
+        "price": 5.99
+      },
+      "quantity": 1,
+      "subTotal": 5.99
+    }
+  ]
+}

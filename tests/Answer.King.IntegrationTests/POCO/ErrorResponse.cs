@@ -8,5 +8,5 @@ using System.Threading.Tasks;
 internal class ErrorResponse
 {
     public required object Errors { get; set; }
-    public required int Status {  get; set; }   
-}
+    public required int Status { get; set; }
+} 
