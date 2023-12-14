@@ -53,14 +53,11 @@
 
   <ItemGroup>
     <InternalsVisibleTo Include="$(AssemblyName).UnitTests" />
+    <InternalsVisibleTo Include="$(AssemblyName).IntegrationTests" />
   </ItemGroup>
 
   <ItemGroup>
     <None Include="appsettings.Production.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="db\" />
   </ItemGroup>
 
 </Project>

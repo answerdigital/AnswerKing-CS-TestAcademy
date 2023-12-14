@@ -1,0 +1,19 @@
+﻿{
+  "id": 4,
+  "createdOn": "2023-12-14T14:42:34.6058543Z",
+  "lastUpdated": "2023-12-14T14:42:34.6058679Z",
+  "orderStatus": "Created",
+  "orderTotal": 99.9,
+  "lineItems": [
+    {
+      "product": {
+        "id": 5,
+        "name": "Cheese Burger",
+        "description": "Plain burger with cheese",
+        "price": 9.99
+      },
+      "quantity": 10,
+      "subTotal": 99.9
+    }
+  ]
+}

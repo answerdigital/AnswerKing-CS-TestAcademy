@@ -1,0 +1,39 @@
+﻿{
+  "id": 4,
+  "createdOn": "2023-12-14T14:42:34.3890478Z",
+  "lastUpdated": "2023-12-14T14:42:34.3892504Z",
+  "orderStatus": "Created",
+  "orderTotal": 18.97,
+  "lineItems": [
+    {
+      "product": {
+        "id": 1,
+        "name": "Fish",
+        "description": "Delicious and satisfying.",
+        "price": 5.99
+      },
+      "quantity": 1,
+      "subTotal": 5.99
+    },
+    {
+      "product": {
+        "id": 2,
+        "name": "Chips",
+        "description": "Nothing more to say.",
+        "price": 2.99
+      },
+      "quantity": 1,
+      "subTotal": 2.99
+    },
+    {
+      "product": {
+        "id": 5,
+        "name": "Cheese Burger",
+        "description": "Plain burger with cheese",
+        "price": 9.99
+      },
+      "quantity": 1,
+      "subTotal": 9.99
+    }
+  ]
+}

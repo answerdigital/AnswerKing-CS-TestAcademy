@@ -1,0 +1,8 @@
+﻿{
+  "Errors": {
+    "lineItems[0].quantity": [
+      "'quantity' must be greater than or equal to '0'."
+    ]
+  },
+  "Status": 400
+}

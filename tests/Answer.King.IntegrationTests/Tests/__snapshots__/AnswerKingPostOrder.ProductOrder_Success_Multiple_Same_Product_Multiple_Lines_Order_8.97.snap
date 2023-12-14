@@ -1,0 +1,19 @@
+﻿{
+  "id": 4,
+  "createdOn": "2023-12-14T14:42:34.498567Z",
+  "lastUpdated": "2023-12-14T14:42:34.4985818Z",
+  "orderStatus": "Created",
+  "orderTotal": 8.97,
+  "lineItems": [
+    {
+      "product": {
+        "id": 2,
+        "name": "Chips",
+        "description": "Nothing more to say.",
+        "price": 2.99
+      },
+      "quantity": 3,
+      "subTotal": 8.97
+    }
+  ]
+}
