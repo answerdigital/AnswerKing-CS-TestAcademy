@@ -1,0 +1,35 @@
+name: Workflow Dispatch
+
+on:
+  push:
+    branches:
+      - develop
+  workflow_dispatch: # Manual Trigger
+
+env:
+  DOTNET_VERSION: '7.0.102' # The .NET SDK version to use
+
+jobs:
+  build-and-test:
+
+    name: build-and-test-${{matrix.os}}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macOS-latest]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: ${{ env.DOTNET_VERSION }}
+
+    - name: Install dependencies
+      run: dotnet restore
+      
+    - name: Build
+      run: dotnet build --configuration Debug --no-restore -nowarn:1591
+    
+    - name: Run NUnit tests
+      run: dotnet test --no-build --configuration Debug --filter Category=IntegrationTests
