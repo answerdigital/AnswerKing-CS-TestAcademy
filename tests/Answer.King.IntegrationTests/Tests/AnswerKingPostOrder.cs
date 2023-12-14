@@ -7,7 +7,7 @@ using Snapshooter.NUnit;
 using static RestAssured.Dsl;
 
 namespace Answer.King.IntegrationTests.Tests;
-[TestFixture]
+[TestFixture, Category("IntegrationTests")]
 public class AnswerKingPostOrder : BaseTestClass
 {
     [Parallelizable(scope: ParallelScope.Self)]

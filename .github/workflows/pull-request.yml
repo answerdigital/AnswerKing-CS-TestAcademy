@@ -34,4 +34,4 @@ jobs:
       run: dotnet build --configuration Debug --no-restore -nowarn:1591
     
     - name: Run NUnit tests
-      run: dotnet test --no-build --configuration Debug --filter FullyQualifiedName~Answer.King.IntegrationTests.Tests.AnswerKingPostOrder.ProductOrder*
+      run: dotnet test --no-build --configuration Debug --filter Category=IntegrationTests
