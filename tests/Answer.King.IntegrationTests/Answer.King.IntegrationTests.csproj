@@ -34,4 +34,8 @@
     <ProjectReference Include="..\..\src\Answer.King.Domain\Answer.King.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Tests\__snapshots__\" />
+  </ItemGroup>
+
 </Project>

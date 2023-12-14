@@ -52,7 +52,7 @@ public class AnswerKingPostOrder : BaseTestClass
     [TestCase("Fail_No_Quantity_Line")]
     [TestCase("Fail_No_Quantity")]
     [TestCase("Fail_Negative_Quantity")]
-    public void FailedOrders(string name)
+    public void ProductOrder_Fail(string name)
     {
         var orderRequest = DataHelper.GetOrderData(name);
 
@@ -68,7 +68,7 @@ public class AnswerKingPostOrder : BaseTestClass
     }
 
     [Test]
-    public void FailedOrder_NoBody()
+    public void ProductOrder_Fail_NoBody()
     {
         var response = (ErrorResponse)Given(this.Client)
         .When()
