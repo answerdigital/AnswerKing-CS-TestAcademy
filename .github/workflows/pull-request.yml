@@ -31,7 +31,7 @@ jobs:
       run: dotnet restore
       
     - name: Build
-      run: dotnet build --debug Debug --no-restore -nowarn:1591
+      run: dotnet build --configuration Debug --no-restore -nowarn:1591
     
     - name: Run NUnit tests
       run: dotnet test --no-build --configuration Debug --filter FullyQualifiedName~Answer.King.IntegrationTests.Tests.AnswerKingPostOrder.ProductOrder*
